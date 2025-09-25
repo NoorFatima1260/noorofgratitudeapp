@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="20dp">
+    <Button
+        android:id="@+id/btn_save_gratitude"
+        android:layout_width="150dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="Save Gratitude"
+        android:backgroundTint="@color/dark_gray"
+        android:textColor="#FFFFFF" />
+    <ImageButton
+        android:id="@+id/btn_share_gratitude"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/share_button"
+        android:layout_marginStart="8dp"
+        android:contentDescription="Share Gratitude" />
+</LinearLayout>

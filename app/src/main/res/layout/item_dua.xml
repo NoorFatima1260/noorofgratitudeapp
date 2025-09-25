@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <!-- Dua Title -->
+    <TextView
+        android:id="@+id/duaTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#04332F" />
+    <!-- Dua Text -->
+    <TextView
+        android:id="@+id/duaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#0B2F0C"
+        android:textStyle="bold"
+        android:paddingTop="5dp" />
+    <TextView
+        android:id="@+id/duaDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:padding="8dp"/>
+    <!-- Buttons Row (Bookmark + Play) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="10dp">
+        <ImageButton
+            android:id="@+id/bookmarkButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bookmark_icon"
+            android:scaleType="fitCenter"
+            android:contentDescription="bookmark"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="10dp"/>
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/play"
+            android:scaleType="fitCenter"
+            android:contentDescription="play"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+</LinearLayout>

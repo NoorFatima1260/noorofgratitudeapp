@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light"
+    tools:context=".nav_Islamic_Calendar">
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_green"
+        android:padding="12dp"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/back_comment"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_gratitude_challenge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Islamic Calendar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <!-- Dates -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/button_bg"
+        android:paddingHorizontal="24dp">
+
+        <TextView
+            android:id="@+id/txtHijriDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🕋 Hijri Date: -"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_dark"
+            android:gravity="center_horizontal"
+            android:paddingBottom="6dp" />
+
+        <TextView
+            android:id="@+id/txtGregorianDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Gregorian Date: -"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_green"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- Calendar -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dateTextAppearance="?android:attr/textAppearanceLarge" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

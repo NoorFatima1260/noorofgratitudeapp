@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="1dp"
+    android:background="@color/light_beige"
+    app:cardElevation="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <!-- Profile Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/ivPostImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/profile_circle_background"
+                android:elevation="2dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/default_profile_image" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTimestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 min ago"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Reactions + Comments Summary -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:padding="8dp">
+
+            <!-- Reaction Summary -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="12dp">
+
+                <ImageView
+                    android:id="@+id/btntotalReaction"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/like_comm"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/green_circle" />
+
+                <TextView
+                    android:id="@+id/tvReactionSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No reaction"
+                    android:textSize="10sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Comment Summary -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/btntotalComments"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:contentDescription="summary of comments"
+                    android:background="@drawable/green_circle"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@android:drawable/stat_notify_chat" />
+
+                <TextView
+                    android:id="@+id/txtcommentsSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="10sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+        <!-- Media Container -->
+        <FrameLayout
+            android:id="@+id/media_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/filePreviewImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:keepScreenOn="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <VideoView
+                android:id="@+id/videoPreview"
+                android:layout_width="356dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/audioIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/pdfIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="start"
+                android:src="@drawable/alhamdulilahm"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Optional spacing -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <!-- Post Content -->
+        <TextView
+            android:id="@+id/tvPostText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="100"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Gratitude post content here..."
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.3"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Actions Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Reaction -->
+            <LinearLayout
+                android:id="@+id/layoutReactions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <ImageView
+                    android:id="@+id/btnReaction"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_like" />
+
+                <TextView
+                    android:id="@+id/tvlike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Like"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:id="@+id/reactionContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <!-- Comment -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <ImageView
+                    android:id="@+id/btnComment"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/comment" />
+
+                <TextView
+                    android:id="@+id/tvComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comments"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Share -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <ImageView
+                    android:id="@+id/btnShare"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/share_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Comments -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/comment_bg"
+            android:nestedScrollingEnabled="false"
+            android:visibility="gone"
+            tools:listitem="@layout/item_comment" />
+    </LinearLayout>
+
+    <!-- Reactions Summary Floating Side -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/btnMore"
+            android:layout_width="27dp"
+            android:layout_height="19dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="More Options"
+            android:src="@drawable/three_dots" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="280dp"
+    android:viewportWidth="280"
+    android:viewportHeight="280">
+
+  <!-- Outer Dial Circle -->
+  <path
+      android:fillColor="#114D23"
+      android:pathData="M140,10
+            A130,130 0 1,1 139.9,10 Z" />
+  <path
+      android:strokeColor="#0E3F19"
+      android:strokeWidth="4"
+      android:fillColor="#00000000"
+      android:pathData="M140,10
+            A130,130 0 1,1 139.9,10 Z" />
+
+  <!-- Cardinal Directions -->
+  <path
+      android:fillColor="#FFD700"
+      android:pathData="M140,25 l0,15 l0,-15 Z" />
+  <path
+      android:fillColor="#FFD700"
+      android:pathData="M255,140 l-15,0 l15,0 Z" />
+  <path
+      android:fillColor="#FFD700"
+      android:pathData="M140,255 l0,-15 l0,15 Z" />
+  <path
+      android:fillColor="#FFD700"
+      android:pathData="M25,140 l15,0 l-15,0 Z" />
+
+  <!-- Needle (Qibla pointer) -->
+  <path
+      android:fillColor="#B32A2A"
+      android:pathData="M140,260 L122,60 L140,40 L158,60 Z" />
+  <path
+      android:fillColor="#E23A3A"
+      android:pathData="M140,20 L126,70 L140,90 L154,70 Z" />
+
+  <!-- Center Hub -->
+  <group>
+    <path
+        android:fillColor="#0D4710"
+        android:pathData="M140,140 a16,16 0 1,0 0.1,0" />
+    <path
+        android:strokeColor="#9B7A2A"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M140,140 a16,16 0 1,0 0.1,0" />
+  </group>
+
+</vector>

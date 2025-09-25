@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/light_beige"
+    tools:context=".SurahDetailActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:backgroundTint="#509546"
+        android:background="@drawable/button_bg">
+        <!-- Back Button on Left -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/back_comment"
+            android:contentDescription="Back"
+            android:scaleType="fitCenter"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+        <!-- Surah Title in Center -->
+        <TextView
+            android:id="@+id/surahNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surah Name"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:backgroundTint="#509546"
+            android:textColor="@color/background_light"
+            android:background="@drawable/button_bg"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <!-- Surah pdf -->
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_marginTop="30dp" />
+    <ProgressBar
+        android:id="@+id/pdfLoadingProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <!-- Audio Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:paddingTop="10dp">
+        <!-- Bookmark Button -->
+        <ImageButton
+            android:id="@+id/bookmarkButton"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/bookmark_icon"
+             android:contentDescription="Bookmark"
+            android:scaleType="fitCenter"
+            android:padding="8dp"/>
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@drawable/play"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+             android:contentDescription="Play/Pause"
+            android:padding="8dp"/>
+    </LinearLayout>
+    <SeekBar
+        android:id="@+id/audioSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_green"
+        android:layout_marginTop="15dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:padding="10dp">
+        <!-- Previous Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            app:icon="@drawable/previous"
+            app:iconGravity="textEnd"
+            android:padding="8dp"
+            android:textColor="#062407"
+            android:background="?android:attr/selectableItemBackground"
+            android:backgroundTint="#509546"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        <!-- Space Between Buttons -->
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+        <!-- Next Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            app:icon="@drawable/next"
+            app:iconGravity="textStart"
+            android:padding="8dp"
+            android:textColor="#053107"
+            android:backgroundTint="#509546"
+            android:background="?android:attr/selectableItemBackground"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_calander"
+        android:icon="@drawable/calendar"
+        android:title="Calendar" />
+    <item
+        android:id="@+id/nav_prayer"
+        android:icon="@drawable/prayer"
+        android:title="Prayer" />
+    <item
+        android:id="@+id/nav_Qibla"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Qibla" />
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/more"
+        android:title="more" />
+
+</menu>

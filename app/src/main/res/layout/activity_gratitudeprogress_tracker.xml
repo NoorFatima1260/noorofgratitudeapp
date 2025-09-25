@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/light_beige"
+    tools:context="gratitudeprogress_tracker">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+            <!-- Toolbar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#388E3C"
+                android:padding="12dp">
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/back_comment"
+                    android:background="@android:color/transparent"
+                    app:tint="@android:color/white" />
+                <TextView
+                    android:id="@+id/tv_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gratitude Progress"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-medium" />
+            </RelativeLayout>
+            <!-- Circular Progress with Text -->
+            <FrameLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp">
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progress_circular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:indicatorSize="200dp"
+                    app:trackThickness="12dp"
+                    app:trackColor="#E0E0E0"
+                    app:indicatorColor="#4CAF50"
+                    android:max="100"
+                    android:progress="70" />
+                <TextView
+                    android:id="@+id/tv_progress_percent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="24sp"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </FrameLayout>
+            <!-- Stats Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                android:background="@android:color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        android:id="@+id/tv_total_entries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Entries: 45"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121" />
+                    <TextView
+                        android:id="@+id/tv_private_entries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Private: 30"
+                        android:textSize="16sp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#4CAF50" />
+                    <TextView
+                        android:id="@+id/tv_public_entries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Public: 15"
+                        android:textSize="16sp"
+                        android:textColor="#388E3C" />
+                    <TextView
+                        android:id="@+id/tv_streak_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Streak: 5 days"
+                        android:layout_marginTop="8dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#212121" />
+                    <TextView
+                        android:id="@+id/tv_last_entry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Entry: Alhamdulillah for family"
+                        android:layout_marginTop="8dp"
+                        android:textSize="16sp"
+                        android:textColor="#616161" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- Islamic Motivation -->
+            <TextView
+                android:id="@+id/tv_motivation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="“If you are grateful, I will surely increase you in favor.” — Quran 14:7"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:paddingTop="24dp"
+                android:paddingBottom="32dp"
+                android:textColor="#2E7D32"
+                android:fontFamily="serif" />
+        </LinearLayout>
+    </ScrollView>

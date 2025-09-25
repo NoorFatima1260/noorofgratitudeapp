@@ -1,0 +1,119 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/light_beige"
+    tools:context=".DailyMoodLoggingActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FAFAFA"
+        android:elevation="2dp"
+        android:padding="12dp"
+        android:layout_margin="4dp"
+        android:backgroundTint="#ffffff"
+        android:clipToPadding="false">
+        <!-- Toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:padding="10dp">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back_comment"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Back"
+                android:scaleType="fitCenter" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Log Your Mood"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <!-- Quote of the Day -->
+        <TextView
+            android:id="@+id/textViewQuote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="“Indeed, with hardship [will be] ease.” (Qur’an 94:6)"
+            android:textColor="#555"
+            android:textSize="16sp"
+            android:layout_marginTop="14dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_background_lightgreen" />
+        <!-- Mood Selection -->
+        <RadioGroup
+            android:id="@+id/radioGroupMood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+            <RadioButton
+                android:id="@+id/radioButtonHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😊 Feeling Happy"
+                android:textSize="18sp"/>
+            <RadioButton
+                android:id="@+id/radioButtonSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😞 Feeling Sad"
+                android:textSize="18sp"/>
+            <RadioButton
+                android:id="@+id/radioButtonNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😐 Feeling Neutral"
+                android:textSize="18sp"/>
+            <RadioButton
+                android:id="@+id/radioButtonCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌟 Custom Mood"
+                android:textSize="18sp"/>
+        </RadioGroup>
+        <!-- Custom Mood Input -->
+        <EditText
+            android:id="@+id/editTextCustomMood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Describe your mood..."
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+        <!-- Save Mood Button -->
+        <Button
+            android:id="@+id/btnSaveMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Mood"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/dark_green"
+            android:textColor="#fff"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="10dp"/>
+        <!-- Islamic Reminder -->
+        <TextView
+            android:id="@+id/textViewIslamicReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reflect on your feelings – Allah knows what's in your heart."
+            android:textSize="16sp"
+            android:textColor="#444"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_background_grey" />
+    </LinearLayout>
+</ScrollView>

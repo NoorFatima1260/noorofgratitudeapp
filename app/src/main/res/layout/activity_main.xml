@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    android:background="@color/light_beige"
+    tools:context=".MainActivity">
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:elevation="4dp"
+        android:padding="5dp"
+        android:background="@color/green_dark"
+        app:collapseIcon="@color/black"
+        app:popupTheme="@style/CustomPopupMenu"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- Fragment Container (Initially Hidden) -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <!-- Main Content -->
+    <ScrollView
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="5dp"
+            android:padding="20dp">
+            <!-- Gratitude Journal Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_gratitude_journal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="#509546"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="13dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:contentDescription="Gratitude Journal Image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gratitute_journal" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Gratitude Journal"
+                        android:textColor="#509546"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- Mood Journal Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_mood_journal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="12dp"
+                android:backgroundTint="#509546"
+                app:cardElevation="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginVertical="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="13dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:contentDescription="Mood Journal Image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/alhamdulilah" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Mood Journal"
+                        android:textColor="#509546"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- Verse of the Day Container -->
+            <LinearLayout
+                android:id="@+id/verse_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:background="@color/green_dark"
+                android:elevation="4dp">
+
+                <!-- Title + Date Picker Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/verse_of_the_day"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="#FCFFFC"
+                        android:text="Verse of the day"
+                        android:padding="8dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_pick_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/ic_menu_my_calendar"
+                        android:text="Select Date" />
+                </LinearLayout>
+
+                <!-- Arabic verse -->
+                <TextView
+                    android:id="@+id/verse_arabic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#042404"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:padding="8dp" />
+
+                <!-- Translation -->
+                <TextView
+                    android:id="@+id/verse_translation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#062F06"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:padding="8dp" />
+
+                <!-- Reference -->
+                <TextView
+                    android:id="@+id/verse_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Verse of the Day"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#062307"
+                    android:background="@color/white"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="2dp" />
+
+                <!-- Play button -->
+                <ImageButton
+                    android:id="@+id/play_audio_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="Play Audio"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="right"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#44853A"
+        app:itemTextColor="#fff"
+        app:itemIconTint="#022402"
+        app:itemIconSize="18dp"
+        app:itemTextAppearanceActive="@style/BottomNavTextStyle"
+        app:itemTextAppearanceInactive="@style/BottomNavTextStyle"
+        app:itemRippleColor="@color/dark_green"
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="labeled" />
+</LinearLayout>

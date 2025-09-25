@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background Circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#E2D9D9"/> <!-- Light Gray Background -->
+            <size android:width="200dp" android:height="200dp"/>
+        </shape>
+    </item>
+
+    <!-- Progress Arc -->
+    <item>
+        <rotate
+            android:fromDegrees="-90"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="ring"
+                android:thicknessRatio="20"
+                android:useLevel="true">
+                <solid android:color="#4CAF50"/> <!-- Green Progress Color -->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

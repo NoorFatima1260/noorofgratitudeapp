@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DuaActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#4CAF50">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:src="@drawable/back_comment"
+            android:scaleType="centerInside"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Back" />
+        <TextView
+            android:id="@+id/tv_gratitude_challenge_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="24sp"
+            android:textColor="#FBFBFB"
+            android:text="Daily Blessings"
+            android:textAlignment="center"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/duaRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="7dp"
+        android:background="@drawable/borderquranicverse"
+        android:scrollbarThumbVertical="@drawable/thick_scrollbar"/>
+</LinearLayout>

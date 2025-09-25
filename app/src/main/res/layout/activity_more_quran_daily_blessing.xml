@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_beige"
+    tools:context=".MoreQuranDailyBlessing">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/dark_green">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/back_comment"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Back"
+            android:scaleType="fitCenter"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Al-Quran and Dua"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!-- First CardView Quran -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_Quran"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:focusable="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        app:collapseIcon="@color/black"
+        android:backgroundTint="@color/green_dark"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginVertical="40dp"
+        android:layout_gravity="center">
+        <!-- Quran content inside CardView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@drawable/quransahi"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="Quran"
+                />
+            <!-- Quran Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:text="Al-Quran"
+                android:textColor="#053306"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- Second CardView and its content (Dua) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_Dua"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:focusable="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="12dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        app:collapseIcon="@color/black"
+        android:backgroundTint="@color/green_dark"
+        android:layout_gravity="center">
+        <!-- Dua content inside CardView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp">
+            <!-- Dua Text -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/handsdua"
+                android:contentDescription="Quran"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dua"
+                android:textSize="20sp"
+                android:textColor="#043306"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+                android:padding="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+

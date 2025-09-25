@@ -1,0 +1,79 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- Main gallery frame -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#0F5412"
+        android:strokeWidth="2"
+        android:pathData="M4,4 h56 a4,4 0 0 1 4,4 v52 a4,4 0 0 1 -4,4 h-56 a4,4 0 0 1 -4,-4 v-52 a4,4 0 0 1 4,-4 z" />
+
+    <!-- Image icon rectangle -->
+    <path
+        android:fillColor="#A3D8FF"
+        android:strokeColor="#1A73E8"
+        android:strokeWidth="2"
+        android:pathData="M6,6 h18 v18 h-18 z" />
+
+    <!-- Image icon circle as path -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M15,12
+                          C15,10.343 16.343,9 18,9
+                          C19.657,9 21,10.343 21,12
+                          C21,13.657 19.657,15 18,15
+                          C16.343,15 15,13.657 15,12 Z" />
+
+    <!-- Image diagonal line -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#1A73E8"
+        android:strokeWidth="2"
+        android:pathData="M6,24 L15,15 L24,24" />
+
+    <!-- Video icon -->
+    <path
+        android:fillColor="#D4EDDA"
+        android:strokeColor="#333333"
+        android:strokeWidth="2"
+        android:pathData="M40,6 h18 v18 h-18 z" />
+    <path
+        android:fillColor="#333333"
+        android:pathData="M44,8 L44,22 L54,15 z" />
+
+    <!-- PDF icon -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#EA4335"
+        android:strokeWidth="2"
+        android:pathData="M6,40 h18 v18 h-18 z" />
+    <path
+        android:strokeColor="#EA4335"
+        android:strokeWidth="2"
+        android:pathData="M9,44 h12 M9,48 h12 M9,52 h12" />
+
+    <!-- Story bubble -->
+    <path
+        android:fillColor="#FFF1B8"
+        android:strokeColor="#F4B400"
+        android:strokeWidth="2"
+        android:pathData="M40,40 h18 v12 h-6 l-6,6 v-6 h-6 z" />
+
+    <!-- Shadow -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M40,52 h18 v2 h-18 z" />
+
+    <!-- Story text -->
+    <path
+        android:fillColor="#F4B400"
+        android:pathData="M42,46 h1.4 v4.5 h-1.4 z
+                          M44.5,46 h1.4 v4.5 h-1.4 z
+                          M47,46 h1.4 v4.5 h-1.4 z
+                          M49.5,46 h1.4 v4.5 h-1.4 z
+                          M52,46 h1.4 v4.5 h-1.4 z" />
+
+</vector>

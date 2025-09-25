@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="12dp"
+    android:layout_marginStart="16dp"
+    tools:ignore="RtlSymmetry">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivReplyProfile"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:importantForAccessibility="no"
+            android:src="@drawable/default_profile_image"
+            android:scaleType="centerCrop"
+            android:background="@drawable/profile_circle_background"
+            android:adjustViewBounds="true"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/tvReplyUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@id/ivReplyProfile"
+            android:text="Reply User"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/btnMore"
+            android:layout_width="27dp"
+            android:layout_height="19dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="More Options"
+            android:src="@drawable/three_dots_horizontal" />
+        <TextView
+            android:id="@+id/tvReplyTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvReplyUsername"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/ivReplyProfile"
+            android:text="2h ago"
+            android:textColor="#888888"
+
+            android:textSize="10sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvReplyContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reply content"
+        android:textColor="#444"
+        android:layout_marginTop="4dp"/>
+    <LinearLayout
+        android:id="@+id/replyActions"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/btnReplyLike"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_like"
+            android:contentDescription="Like"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:padding="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:textSize="10sp"
+            android:textColor="#FB000000"
+            android:textStyle="bold"
+            android:layout_marginEnd="12dp" />
+        <ImageView
+            android:id="@+id/btnReplyDislike"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/dislike"
+            android:contentDescription="Dislike"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:padding="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dislike"
+            android:textSize="10sp"
+            android:textColor="#FB000000"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/btnnestedReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reply"
+            android:textSize="10dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvToggleNestedReplies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Replies"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNestedReplies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:nestedScrollingEnabled="false"
+        tools:listitem="@layout/item_reply" />
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+    <!-- Prayer Name -->
+    <TextView
+        android:id="@+id/txtPrayerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Fajr"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+    <!-- Prayer Time -->
+    <TextView
+        android:id="@+id/txtPrayerTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05:30 AM"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:layout_marginRight="20dp"/>
+    <!-- Bell Icon -->
+    <ImageView
+        android:id="@+id/imgAlarmBell"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="12dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_lock_silent_mode" />
+</LinearLayout>

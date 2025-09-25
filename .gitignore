@@ -1,0 +1,35 @@
+
+*.apk
+*.ap_
+*.aab
+
+.gradle/
+build/
+captures/
+
+.externalNativeBuild/
+
+local.properties
+
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Log files
+*.log
+
+# Keystore files (sensitive)
+*.jks
+*.keystore
+
+# NDK
+obj/
+*.so
+
+# Others
+*.tmp
+*.bak
+*.swp
+.DS_Store

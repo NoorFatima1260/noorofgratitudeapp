@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/light_beige"
+    tools:context=".SignUpActivity">
+        <!-- Toolbar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_dark"
+            android:padding="16dp"
+            android:elevation="4dp">
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/back_comment"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:contentDescription="Back"
+                    android:layout_alignParentStart="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <!-- Input Fields -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Username"
+            android:paddingTop="25dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usernameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColorHint="#0E3110"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="✉️Email"
+            android:textColorHint="#0E3110"
+            app:endIconMode="clear_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userGmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginTop="16dp"
+            app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Sign-Up Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Sign Up"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/green_dark" />
+        <!-- Error Message -->
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+        <!-- Already have an account? Login -->
+        <TextView
+            android:id="@+id/loginTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textColor="#FFCA2F"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"/>
+        <!-- Divider Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Or continue with"
+            android:textColor="@color/dark_green"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="16dp" />
+        <!-- Social Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+                <ImageButton
+                    android:id="@+id/googleLoginBtn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/ic_google"
+                    android:backgroundTint="@drawable/button_bg"
+                    android:contentDescription="Google Login"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:padding="10dp"
+                    android:elevation="2dp" />
+                <ImageButton
+                    android:id="@+id/facebookLoginBtn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_facebook"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:backgroundTint="@drawable/button_bg"
+                    android:contentDescription="Facebook Login"
+                    android:padding="10dp"
+                    android:elevation="2dp" />
+        </LinearLayout>
+</LinearLayout>
